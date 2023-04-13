@@ -147,7 +147,7 @@ class BayesianHierarchicalClustering(
                 # store results
                 merge_info = [ij, active_nodes[k], log_r, r1, r2]
                 tmp_merge = np.vstack((tmp_merge, merge_info))
-        print(arc_list)
+        # print(arc_list)
         return api.Result(arc_list,
                           np.arange(0, ij + 1),
                           log_p[-1],
