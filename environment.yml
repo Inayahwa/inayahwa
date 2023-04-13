@@ -1,0 +1,11 @@
+name: bayesian-hierarchical-clustering
+channels:
+  - conda-forge
+  - anaconda
+dependencies:
+  - python>=3.8.3
+  - numpy>=1.18.5
+  - matplotlib>=3.2.2
+  - python-graphviz>=0.14
+  - scipy>=1.5.0
+  - pydot>=1.4.1
