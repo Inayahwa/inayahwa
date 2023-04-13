@@ -1,76 +1,75 @@
-# **IMPORTANT**
+[//]: # (# **IMPORTANT**)
 
-This repository is not being maintained anymore. The code was split into two new repositories:
-- Source Code: https://github.com/caponetto/bayesian-hierarchical-clustering
-- Examples: https://github.com/caponetto/bayesian-hierarchical-clustering-examples
+[//]: # ()
+[//]: # (This repository is not being maintained anymore. The code was split into two new repositories:)
 
----
-![Python application](https://github.com/caponetto/bhc/workflows/Python%20application/badge.svg) 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![GitHub Stars](https://img.shields.io/github/stars/caponetto/bhc.svg)](https://github.com/caponetto/bhc/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/caponetto/bhc.svg)](https://github.com/caponetto/bhc/network/members)
+[//]: # (- Source Code: https://github.com/caponetto/bayesian-hierarchical-clustering)
 
-# Bayesian Hierarchical Clustering in python
-This is a python implementation of the Bayesian Hierarchical Clustering algorithm proposed by Heller & Ghahramani (2005).
-> HELLER, Katherine A.; GHAHRAMANI, Zoubin. Bayesian hierarchical clustering. In: **Proceedings of the 22nd international conference on Machine learning**. 2005. p. 297-304.
+[//]: # (- Examples: https://github.com/caponetto/bayesian-hierarchical-clustering-examples)
 
-It also includes the Bayesian Rose Trees extension proposed by Blundell et al (2012).
-> BLUNDELL, Charles; TEH, Yee Whye; HELLER, Katherine A. Bayesian rose trees. arXiv preprint arXiv:1203.3468, 2012.
+[//]: # ()
+[//]: # (---)
 
-## How to run the code
-1. Create an anaconda environment using the file [environment.yml](environment.yml).
+[//]: # (![Python application]&#40;https://github.com/caponetto/bhc/workflows/Python%20application/badge.svg&#41; )
 
-    `$ conda env create -f environment.yml`
+[//]: # ([![License: GPL v3]&#40;https://img.shields.io/badge/License-GPLv3-blue.svg&#41;]&#40;https://www.gnu.org/licenses/gpl-3.0&#41;)
 
-2. Activate the environment after the installation is completed.
+[//]: # ([![GitHub Stars]&#40;https://img.shields.io/github/stars/caponetto/bhc.svg&#41;]&#40;https://github.com/caponetto/bhc/stargazers&#41;)
 
-    `$ conda activate bayesian-hierarchical-clustering`
+[//]: # ([![GitHub Forks]&#40;https://img.shields.io/github/forks/caponetto/bhc.svg&#41;]&#40;https://github.com/caponetto/bhc/network/members&#41;)
 
-3. Run the file [example.py](example.py).
+[//]: # (1. )
 
-    `$ python example.py`
+[//]: # (2. Create an anaconda environment using the file [environment.yml]&#40;environment.yml&#41;.)
 
-4. Check out the output images in the [results](results/) folder.
+[//]: # ()
+[//]: # (    `$ conda env create -f environment.yml`)
 
-**Note**: You can optionally add your own data in the file [data.csv](data/data.csv) but the hyperparameters must be optimized.
+[//]: # ()
+[//]: # (2. Activate the environment after the installation is completed.)
 
-## What to expect from the example code
-A plot of the input data (2D). Suppose we want to find two clusters of data (orange and blue).
+[//]: # ()
+[//]: # (    `$ conda activate bayesian-hierarchical-clustering`)
 
-<p align="center">
-  <a href="results/data_plot.png"><img src="results/data_plot.png" width="500"></a>
-</p>
+[//]: # ()
+[//]: # (3. Run the file [example.py]&#40;example.py&#41;.)
+
+[//]: # ()
+[//]: # (    `$ python example.py`)
+
+[//]: # ()
+[//]: # (4. Check out the output images in the [results]&#40;results/&#41; folder.)
+
+[//]: # ()
+[//]: # (**Note**: You can optionally add your own data in the file [data.csv]&#40;data/data.csv&#41; but the hyperparameters must be optimized.)
+
+[//]: # (## What to expect from the example code)
+
+[//]: # (A plot of the input data &#40;2D&#41;. Suppose we want to find two clusters of data &#40;orange and blue&#41;.)
+
+[//]: # (<p align="center">)
+
+[//]: # (  <a href="results/data_plot.png"><img src="results/data_plot.png" width="500"></a>)
+
+[//]: # (</p>)
  
-Dendrograms obtained from linkage algorithms. Notice that, none of them can tell us the presence of the two clusters.
+[//]: # (Dendrograms obtained from linkage algorithms. Notice that, none of them can tell us the presence of the two clusters.)
 
 <p align="center">
-  <a href="results/linkage_single_plot.png"><img src="results/linkage_single_plot.png" width="250"></a> 
-  <a href="results/linkage_complete_plot.png"><img src="results/linkage_complete_plot.png" width="250"></a> 
+
+[//]: # (  <a href="results/linkage_single_plot.png"><img src="results/linkage_single_plot.png" width="250"></a> )
+[//]: # (  <a href="results/linkage_complete_plot.png"><img src="results/linkage_complete_plot.png" width="250"></a> )
   <a href="results/linkage_average_plot.png"><img src="results/linkage_average_plot.png" width="250"></a>
 </p>
 
-A binary hierarchy obtained from the Bayesian hierarchical clustering algorithm. Notice that, two clusters have been identified containing the expected data points (leaves).
+[//]: # (A binary hierarchy obtained from the Bayesian hierarchical clustering algorithm. Notice that, two clusters have been identified containing the expected data points &#40;leaves&#41;.)
 
 <p align="center">
   <a href="results/bhc_plot.png"><img src="results/bhc_plot.png" width="600"></a> 
 </p>
 
-A non-binary hierarchy obtained from the Bayesian rose trees algorithm. Notice that, two clusters have been identified containing the expected data points (leaves).
+[//]: # (A non-binary hierarchy obtained from the Bayesian rose trees algorithm. Notice that, two clusters have been identified containing the expected data points &#40;leaves&#41;.)
 
 <p align="center">
   <a href="results/brt_plot.png"><img src="results/brt_plot.png" width="600"></a> 
 </p>
-
-## Contribute
-All contributions are welcome, so don't hesitate to submit a pull request. ;-)
-
-## Troubleshooting
-
-If you run into issues with graphviz when running the example, you might need to install it through
-
-`sudo apt-get install python-pydot python-pydot-ng graphviz`
-
-## License
-This code is released under GPL 3.0 License.
-
-Check [LICENSE](LICENSE) file for more information.
